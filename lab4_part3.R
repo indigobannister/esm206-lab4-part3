@@ -19,3 +19,6 @@ db_sub <- db %>%
 
 ggplot(data = db_sub, aes(x = year, y = deaths_per_100k, color = country_name)) +
   geom_line()
+
+# Export as png
+ggsave(here::here("final_graphs", "disease_graph.png"))
